@@ -4,3 +4,9 @@ C:\Users\Junior Zeh\Documents\GitHub\Exercicio-Fada\ExercicioFada\Model\obj\Debu
 C:\Users\Junior Zeh\Documents\GitHub\Exercicio-Fada\ExercicioFada\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
 C:\Users\Junior Zeh\Documents\GitHub\Exercicio-Fada\ExercicioFada\Model\obj\Debug\Model.dll
 C:\Users\Junior Zeh\Documents\GitHub\Exercicio-Fada\ExercicioFada\Model\obj\Debug\Model.pdb
+C:\Users\Junior Zeh\Documents\GitHub\ExercicioFada\Model\bin\Debug\Model.dll
+C:\Users\Junior Zeh\Documents\GitHub\ExercicioFada\Model\bin\Debug\Model.pdb
+C:\Users\Junior Zeh\Documents\GitHub\ExercicioFada\Model\obj\Debug\Model.csprojAssemblyReference.cache
+C:\Users\Junior Zeh\Documents\GitHub\ExercicioFada\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\Junior Zeh\Documents\GitHub\ExercicioFada\Model\obj\Debug\Model.dll
+C:\Users\Junior Zeh\Documents\GitHub\ExercicioFada\Model\obj\Debug\Model.pdb

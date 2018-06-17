@@ -11,3 +11,16 @@ C:\Users\Junior Zeh\Documents\GitHub\Exercicio-Fada\ExercicioFada\WFA\bin\Debug\
 C:\Users\Junior Zeh\Documents\GitHub\Exercicio-Fada\ExercicioFada\WFA\obj\Debug\WFA.csproj.CopyComplete
 C:\Users\Junior Zeh\Documents\GitHub\Exercicio-Fada\ExercicioFada\WFA\obj\Debug\WFA.exe
 C:\Users\Junior Zeh\Documents\GitHub\Exercicio-Fada\ExercicioFada\WFA\obj\Debug\WFA.pdb
+C:\Users\Junior Zeh\Documents\GitHub\ExercicioFada\WFA\bin\Debug\WFA.exe.config
+C:\Users\Junior Zeh\Documents\GitHub\ExercicioFada\WFA\bin\Debug\WFA.exe
+C:\Users\Junior Zeh\Documents\GitHub\ExercicioFada\WFA\bin\Debug\WFA.pdb
+C:\Users\Junior Zeh\Documents\GitHub\ExercicioFada\WFA\bin\Debug\Model.dll
+C:\Users\Junior Zeh\Documents\GitHub\ExercicioFada\WFA\bin\Debug\Model.pdb
+C:\Users\Junior Zeh\Documents\GitHub\ExercicioFada\WFA\obj\Debug\WFA.csprojAssemblyReference.cache
+C:\Users\Junior Zeh\Documents\GitHub\ExercicioFada\WFA\obj\Debug\WFA.ListaFada.resources
+C:\Users\Junior Zeh\Documents\GitHub\ExercicioFada\WFA\obj\Debug\WFA.Properties.Resources.resources
+C:\Users\Junior Zeh\Documents\GitHub\ExercicioFada\WFA\obj\Debug\WFA.csproj.GenerateResource.cache
+C:\Users\Junior Zeh\Documents\GitHub\ExercicioFada\WFA\obj\Debug\WFA.csproj.CoreCompileInputs.cache
+C:\Users\Junior Zeh\Documents\GitHub\ExercicioFada\WFA\obj\Debug\WFA.csproj.CopyComplete
+C:\Users\Junior Zeh\Documents\GitHub\ExercicioFada\WFA\obj\Debug\WFA.exe
+C:\Users\Junior Zeh\Documents\GitHub\ExercicioFada\WFA\obj\Debug\WFA.pdb

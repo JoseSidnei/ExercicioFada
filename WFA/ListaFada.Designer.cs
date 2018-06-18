@@ -30,6 +30,8 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageLista = new System.Windows.Forms.TabPage();
+            this.btnCadastroRapido02 = new System.Windows.Forms.Button();
+            this.btnCadastroRapido01 = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnApagar = new System.Windows.Forms.Button();
             this.btnAdicionar = new System.Windows.Forms.Button();
@@ -39,14 +41,15 @@
             this.ColumnCor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnElemento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPageCadastro = new System.Windows.Forms.TabPage();
-            this.txtCorAsa = new System.Windows.Forms.TextBox();
-            this.txtCor = new System.Windows.Forms.TextBox();
+            this.ckbFazBarulho = new System.Windows.Forms.CheckBox();
+            this.ckbAsaQuebrada = new System.Windows.Forms.CheckBox();
+            this.ckbMulher = new System.Windows.Forms.CheckBox();
+            this.cbCor = new System.Windows.Forms.ComboBox();
+            this.cbCorAsa = new System.Windows.Forms.ComboBox();
+            this.cbElemento = new System.Windows.Forms.ComboBox();
             this.txtFamilia = new System.Windows.Forms.TextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.ckbFazBarulho = new System.Windows.Forms.CheckBox();
-            this.ckbMulher = new System.Windows.Forms.CheckBox();
-            this.txtElemento = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtTamanhoAsa = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -56,24 +59,24 @@
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPageCadastroRapido = new System.Windows.Forms.TabPage();
-            this.btnCadastroRapido001 = new System.Windows.Forms.Button();
-            this.ckbCadastroRapidoMullher = new System.Windows.Forms.CheckBox();
-            this.txtCadastroRapidoCor = new System.Windows.Forms.TextBox();
+            this.btnCancelarCadastrorapido01 = new System.Windows.Forms.Button();
+            this.cbCadastroRapidoCor01 = new System.Windows.Forms.ComboBox();
+            this.btnSalvarRapido01 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtCadastroRapidoFamilia = new System.Windows.Forms.TextBox();
+            this.txtCadastroRapidoFamilia01 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtCadastroRapidoNome = new System.Windows.Forms.TextBox();
+            this.txtCadastroRapidoNome01 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.btnCadastroRapido01 = new System.Windows.Forms.Button();
-            this.btnCadastroRapido02 = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnCancelarCadastrorapido02 = new System.Windows.Forms.Button();
+            this.cbCadastroRapidCoro02 = new System.Windows.Forms.ComboBox();
+            this.btnSalvarRapido02 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtCadastrorapidoFamilia02 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtCadastroRapidoNome02 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.btnCadastroRapido002 = new System.Windows.Forms.Button();
+            this.cbCadastroRapidoMulher = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPageLista.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -114,10 +117,32 @@
             this.tabPageLista.Text = "Lista Fada";
             this.tabPageLista.UseVisualStyleBackColor = true;
             // 
+            // btnCadastroRapido02
+            // 
+            this.btnCadastroRapido02.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastroRapido02.Location = new System.Drawing.Point(649, 84);
+            this.btnCadastroRapido02.Name = "btnCadastroRapido02";
+            this.btnCadastroRapido02.Size = new System.Drawing.Size(242, 40);
+            this.btnCadastroRapido02.TabIndex = 22;
+            this.btnCadastroRapido02.Text = "Cadastro Rápido 02";
+            this.btnCadastroRapido02.UseVisualStyleBackColor = true;
+            this.btnCadastroRapido02.Click += new System.EventHandler(this.btnCadastroRapido02_Click);
+            // 
+            // btnCadastroRapido01
+            // 
+            this.btnCadastroRapido01.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastroRapido01.Location = new System.Drawing.Point(649, 38);
+            this.btnCadastroRapido01.Name = "btnCadastroRapido01";
+            this.btnCadastroRapido01.Size = new System.Drawing.Size(242, 40);
+            this.btnCadastroRapido01.TabIndex = 21;
+            this.btnCadastroRapido01.Text = "Cadastro Rápido 01";
+            this.btnCadastroRapido01.UseVisualStyleBackColor = true;
+            this.btnCadastroRapido01.Click += new System.EventHandler(this.btnCadastroRapido01_Click);
+            // 
             // btnEditar
             // 
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(151, 38);
+            this.btnEditar.Location = new System.Drawing.Point(151, 83);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(139, 40);
             this.btnEditar.TabIndex = 3;
@@ -127,7 +152,7 @@
             // btnApagar
             // 
             this.btnApagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnApagar.Location = new System.Drawing.Point(296, 38);
+            this.btnApagar.Location = new System.Drawing.Point(296, 83);
             this.btnApagar.Name = "btnApagar";
             this.btnApagar.Size = new System.Drawing.Size(139, 40);
             this.btnApagar.TabIndex = 2;
@@ -138,7 +163,7 @@
             // btnAdicionar
             // 
             this.btnAdicionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdicionar.Location = new System.Drawing.Point(6, 38);
+            this.btnAdicionar.Location = new System.Drawing.Point(6, 83);
             this.btnAdicionar.Name = "btnAdicionar";
             this.btnAdicionar.Size = new System.Drawing.Size(139, 40);
             this.btnAdicionar.TabIndex = 1;
@@ -192,14 +217,15 @@
             // 
             // tabPageCadastro
             // 
-            this.tabPageCadastro.Controls.Add(this.txtCorAsa);
-            this.tabPageCadastro.Controls.Add(this.txtCor);
+            this.tabPageCadastro.Controls.Add(this.ckbFazBarulho);
+            this.tabPageCadastro.Controls.Add(this.ckbAsaQuebrada);
+            this.tabPageCadastro.Controls.Add(this.ckbMulher);
+            this.tabPageCadastro.Controls.Add(this.cbCor);
+            this.tabPageCadastro.Controls.Add(this.cbCorAsa);
+            this.tabPageCadastro.Controls.Add(this.cbElemento);
             this.tabPageCadastro.Controls.Add(this.txtFamilia);
             this.tabPageCadastro.Controls.Add(this.btnCancelar);
             this.tabPageCadastro.Controls.Add(this.btnSalvar);
-            this.tabPageCadastro.Controls.Add(this.ckbFazBarulho);
-            this.tabPageCadastro.Controls.Add(this.ckbMulher);
-            this.tabPageCadastro.Controls.Add(this.txtElemento);
             this.tabPageCadastro.Controls.Add(this.label6);
             this.tabPageCadastro.Controls.Add(this.txtTamanhoAsa);
             this.tabPageCadastro.Controls.Add(this.label5);
@@ -217,21 +243,340 @@
             this.tabPageCadastro.Text = "Cadastar Fada";
             this.tabPageCadastro.UseVisualStyleBackColor = true;
             // 
-            // txtCorAsa
+            // ckbFazBarulho
             // 
-            this.txtCorAsa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorAsa.Location = new System.Drawing.Point(328, 166);
-            this.txtCorAsa.Name = "txtCorAsa";
-            this.txtCorAsa.Size = new System.Drawing.Size(249, 22);
-            this.txtCorAsa.TabIndex = 18;
+            this.ckbFazBarulho.AutoSize = true;
+            this.ckbFazBarulho.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbFazBarulho.Location = new System.Drawing.Point(683, 161);
+            this.ckbFazBarulho.Name = "ckbFazBarulho";
+            this.ckbFazBarulho.Size = new System.Drawing.Size(125, 24);
+            this.ckbFazBarulho.TabIndex = 13;
+            this.ckbFazBarulho.Text = "Faz Barulho";
+            this.ckbFazBarulho.UseVisualStyleBackColor = true;
             // 
-            // txtCor
+            // ckbAsaQuebrada
             // 
-            this.txtCor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCor.Location = new System.Drawing.Point(325, 108);
-            this.txtCor.Name = "txtCor";
-            this.txtCor.Size = new System.Drawing.Size(249, 22);
-            this.txtCor.TabIndex = 17;
+            this.ckbAsaQuebrada.AutoSize = true;
+            this.ckbAsaQuebrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbAsaQuebrada.Location = new System.Drawing.Point(683, 100);
+            this.ckbAsaQuebrada.Name = "ckbAsaQuebrada";
+            this.ckbAsaQuebrada.Size = new System.Drawing.Size(143, 24);
+            this.ckbAsaQuebrada.TabIndex = 12;
+            this.ckbAsaQuebrada.Text = "Asa Quebrada";
+            this.ckbAsaQuebrada.UseVisualStyleBackColor = true;
+            // 
+            // ckbMulher
+            // 
+            this.ckbMulher.AutoSize = true;
+            this.ckbMulher.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbMulher.Location = new System.Drawing.Point(683, 48);
+            this.ckbMulher.Name = "ckbMulher";
+            this.ckbMulher.Size = new System.Drawing.Size(82, 24);
+            this.ckbMulher.TabIndex = 11;
+            this.ckbMulher.Text = "Mulher";
+            this.ckbMulher.UseVisualStyleBackColor = true;
+            // 
+            // cbCor
+            // 
+            this.cbCor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCor.FormattingEnabled = true;
+            this.cbCor.Items.AddRange(new object[] {
+            "Abóbora",
+            "Açafrão",
+            "Amarelo",
+            "Âmbar",
+            "Ameixa",
+            "Amêndoa",
+            "Ametista",
+            "Anil",
+            "Azul",
+            "Bege",
+            "Bordô",
+            "Branco",
+            "Bronze",
+            "Cáqui",
+            "Caramelo",
+            "Carmesim",
+            "Carmim",
+            "Castanho",
+            "Cereja",
+            "Chocolate",
+            "Ciano ",
+            "Cinza",
+            "Cinzento",
+            "Cobre",
+            "Coral",
+            "Creme",
+            "Damasco",
+            "Dourado",
+            "Escarlate",
+            "Esmeralda",
+            "Ferrugem",
+            "Fúcsia",
+            "Gelo",
+            "Grená",
+            "Gris",
+            "Índigo",
+            "Jade",
+            "Jambo",
+            "Laranja",
+            "Lavanda",
+            "Lilás ",
+            "Limão",
+            "Loiro",
+            "Magenta",
+            "Malva",
+            "Marfim",
+            "Marrom",
+            "Mostarda",
+            "Negro",
+            "Ocre",
+            "Oliva",
+            "Ouro",
+            "Pêssego",
+            "Prata",
+            "Preto",
+            "Púrpura",
+            "Rosa",
+            "Roxo",
+            "Rubro",
+            "Salmão",
+            "Sépia",
+            "Terracota",
+            "Tijolo",
+            "Turquesa",
+            "Uva",
+            "Verde",
+            "Vermelho",
+            "Vinho",
+            "Violeta",
+            "Amarelo-avermelhado",
+            "Amarelo-canário",
+            "Amarelo-cinzento",
+            "Amarelo-enxofre",
+            "Amarelo-esverdeado",
+            "Amarelo-fosco",
+            "Amarelo-gualdo",
+            "Amarelo-limão",
+            "Amarelo-ocre",
+            "Amarelo-ouro",
+            "Amarelo-palha",
+            "Amarelo-torrado",
+            "Azul-ardósia",
+            "Azul-celeste",
+            "Azul-cobalto",
+            "Azul-ferrete",
+            "Azul-marinho",
+            "Azul-pavão",
+            "Azul-petróleo",
+            "Azul-piscina",
+            "Azul-turquesa",
+            "Azul-violeta",
+            "Branco-sujo",
+            "Castanho-avermelhado",
+            "Cinza-ardósia",
+            "Cinzento-azulado",
+            "Cinzento-pérola",
+            "Rosa-bebê",
+            "Rosa-choque",
+            "Verde-abacate",
+            "Verde-água",
+            "Verde-alface",
+            "Verde-amarelo",
+            "Verde-azul",
+            "Verde-bandeira",
+            "Verde-bronze",
+            "Verde-cinza",
+            "Verde-esmeralda",
+            "Verde-garrafa",
+            "Verde-mar",
+            "Verde-militar",
+            "Verde-musgo",
+            "Verde-oliva",
+            "Vermelho-alaranjado",
+            "Vermelho-cereja",
+            "Vermelho-púrpura",
+            "Vermelho-tostado",
+            "Amarelo-claro",
+            "Amarelo-escuro",
+            "Azul-claro",
+            "Azul-escuro",
+            "Castanho-claro",
+            "Castanho-escuro",
+            "Cinza-claro",
+            "Cinza-escuro",
+            "Laranja-claro",
+            "Laranja-escuro",
+            "Marrom-claro",
+            "Marrom-escuro",
+            "Rosa-claro",
+            "Rosa-escuro",
+            "Verde-claro",
+            "Verde-escuro"});
+            this.cbCor.Location = new System.Drawing.Point(328, 105);
+            this.cbCor.Name = "cbCor";
+            this.cbCor.Size = new System.Drawing.Size(249, 24);
+            this.cbCor.TabIndex = 5;
+            // 
+            // cbCorAsa
+            // 
+            this.cbCorAsa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCorAsa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCorAsa.FormattingEnabled = true;
+            this.cbCorAsa.Items.AddRange(new object[] {
+            "Abóbora",
+            "Açafrão",
+            "Amarelo",
+            "Âmbar",
+            "Ameixa",
+            "Amêndoa",
+            "Ametista",
+            "Anil",
+            "Azul",
+            "Bege",
+            "Bordô",
+            "Branco",
+            "Bronze",
+            "Cáqui",
+            "Caramelo",
+            "Carmesim",
+            "Carmim",
+            "Castanho",
+            "Cereja",
+            "Chocolate",
+            "Ciano ",
+            "Cinza",
+            "Cinzento",
+            "Cobre",
+            "Coral",
+            "Creme",
+            "Damasco",
+            "Dourado",
+            "Escarlate",
+            "Esmeralda",
+            "Ferrugem",
+            "Fúcsia",
+            "Gelo",
+            "Grená",
+            "Gris",
+            "Índigo",
+            "Jade",
+            "Jambo",
+            "Laranja",
+            "Lavanda",
+            "Lilás ",
+            "Limão",
+            "Loiro",
+            "Magenta",
+            "Malva",
+            "Marfim",
+            "Marrom",
+            "Mostarda",
+            "Negro",
+            "Ocre",
+            "Oliva",
+            "Ouro",
+            "Pêssego",
+            "Prata",
+            "Preto",
+            "Púrpura",
+            "Rosa",
+            "Roxo",
+            "Rubro",
+            "Salmão",
+            "Sépia",
+            "Terracota",
+            "Tijolo",
+            "Turquesa",
+            "Uva",
+            "Verde",
+            "Vermelho",
+            "Vinho",
+            "Violeta",
+            "Amarelo-avermelhado",
+            "Amarelo-canário",
+            "Amarelo-cinzento",
+            "Amarelo-enxofre",
+            "Amarelo-esverdeado",
+            "Amarelo-fosco",
+            "Amarelo-gualdo",
+            "Amarelo-limão",
+            "Amarelo-ocre",
+            "Amarelo-ouro",
+            "Amarelo-palha",
+            "Amarelo-torrado",
+            "Azul-ardósia",
+            "Azul-celeste",
+            "Azul-cobalto",
+            "Azul-ferrete",
+            "Azul-marinho",
+            "Azul-pavão",
+            "Azul-petróleo",
+            "Azul-piscina",
+            "Azul-turquesa",
+            "Azul-violeta",
+            "Branco-sujo",
+            "Castanho-avermelhado",
+            "Cinza-ardósia",
+            "Cinzento-azulado",
+            "Cinzento-pérola",
+            "Rosa-bebê",
+            "Rosa-choque",
+            "Verde-abacate",
+            "Verde-água",
+            "Verde-alface",
+            "Verde-amarelo",
+            "Verde-azul",
+            "Verde-bandeira",
+            "Verde-bronze",
+            "Verde-cinza",
+            "Verde-esmeralda",
+            "Verde-garrafa",
+            "Verde-mar",
+            "Verde-militar",
+            "Verde-musgo",
+            "Verde-oliva",
+            "Vermelho-alaranjado",
+            "Vermelho-cereja",
+            "Vermelho-púrpura",
+            "Vermelho-tostado",
+            "Amarelo-claro",
+            "Amarelo-escuro",
+            "Azul-claro",
+            "Azul-escuro",
+            "Castanho-claro",
+            "Castanho-escuro",
+            "Cinza-claro",
+            "Cinza-escuro",
+            "Laranja-claro",
+            "Laranja-escuro",
+            "Marrom-claro",
+            "Marrom-escuro",
+            "Rosa-claro",
+            "Rosa-escuro",
+            "Verde-claro",
+            "Verde-escuro"});
+            this.cbCorAsa.Location = new System.Drawing.Point(328, 166);
+            this.cbCorAsa.Name = "cbCorAsa";
+            this.cbCorAsa.Size = new System.Drawing.Size(249, 24);
+            this.cbCorAsa.TabIndex = 6;
+            // 
+            // cbElemento
+            // 
+            this.cbElemento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbElemento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbElemento.FormattingEnabled = true;
+            this.cbElemento.Items.AddRange(new object[] {
+            "Àgua",
+            "Ar",
+            "Fogo",
+            "Terra"});
+            this.cbElemento.Location = new System.Drawing.Point(19, 166);
+            this.cbElemento.Name = "cbElemento";
+            this.cbElemento.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.cbElemento.Size = new System.Drawing.Size(249, 24);
+            this.cbElemento.TabIndex = 3;
             // 
             // txtFamilia
             // 
@@ -239,15 +584,15 @@
             this.txtFamilia.Location = new System.Drawing.Point(19, 108);
             this.txtFamilia.Name = "txtFamilia";
             this.txtFamilia.Size = new System.Drawing.Size(249, 22);
-            this.txtFamilia.TabIndex = 16;
+            this.txtFamilia.TabIndex = 2;
             // 
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(382, 357);
+            this.btnCancelar.Location = new System.Drawing.Point(436, 390);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(192, 52);
-            this.btnCancelar.TabIndex = 15;
+            this.btnCancelar.TabIndex = 8;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -255,43 +600,13 @@
             // btnSalvar
             // 
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.Location = new System.Drawing.Point(580, 357);
+            this.btnSalvar.Location = new System.Drawing.Point(634, 390);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(192, 52);
-            this.btnSalvar.TabIndex = 14;
+            this.btnSalvar.TabIndex = 7;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
-            // 
-            // ckbFazBarulho
-            // 
-            this.ckbFazBarulho.AutoSize = true;
-            this.ckbFazBarulho.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckbFazBarulho.Location = new System.Drawing.Point(648, 85);
-            this.ckbFazBarulho.Name = "ckbFazBarulho";
-            this.ckbFazBarulho.Size = new System.Drawing.Size(125, 24);
-            this.ckbFazBarulho.TabIndex = 13;
-            this.ckbFazBarulho.Text = "Faz Barulho";
-            this.ckbFazBarulho.UseVisualStyleBackColor = true;
-            // 
-            // ckbMulher
-            // 
-            this.ckbMulher.AutoSize = true;
-            this.ckbMulher.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckbMulher.Location = new System.Drawing.Point(648, 48);
-            this.ckbMulher.Name = "ckbMulher";
-            this.ckbMulher.Size = new System.Drawing.Size(82, 24);
-            this.ckbMulher.TabIndex = 12;
-            this.ckbMulher.Text = "Mulher";
-            this.ckbMulher.UseVisualStyleBackColor = true;
-            // 
-            // txtElemento
-            // 
-            this.txtElemento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtElemento.Location = new System.Drawing.Point(19, 166);
-            this.txtElemento.Name = "txtElemento";
-            this.txtElemento.Size = new System.Drawing.Size(249, 22);
-            this.txtElemento.TabIndex = 11;
             // 
             // label6
             // 
@@ -309,7 +624,7 @@
             this.txtTamanhoAsa.Location = new System.Drawing.Point(328, 50);
             this.txtTamanhoAsa.Name = "txtTamanhoAsa";
             this.txtTamanhoAsa.Size = new System.Drawing.Size(249, 22);
-            this.txtTamanhoAsa.TabIndex = 9;
+            this.txtTamanhoAsa.TabIndex = 4;
             // 
             // label5
             // 
@@ -371,13 +686,14 @@
             // 
             // tabPageCadastroRapido
             // 
-            this.tabPageCadastroRapido.Controls.Add(this.btnCadastroRapido001);
-            this.tabPageCadastroRapido.Controls.Add(this.ckbCadastroRapidoMullher);
-            this.tabPageCadastroRapido.Controls.Add(this.txtCadastroRapidoCor);
+            this.tabPageCadastroRapido.Controls.Add(this.cbCadastroRapidoMulher);
+            this.tabPageCadastroRapido.Controls.Add(this.btnCancelarCadastrorapido01);
+            this.tabPageCadastroRapido.Controls.Add(this.cbCadastroRapidoCor01);
+            this.tabPageCadastroRapido.Controls.Add(this.btnSalvarRapido01);
             this.tabPageCadastroRapido.Controls.Add(this.label7);
-            this.tabPageCadastroRapido.Controls.Add(this.txtCadastroRapidoFamilia);
+            this.tabPageCadastroRapido.Controls.Add(this.txtCadastroRapidoFamilia01);
             this.tabPageCadastroRapido.Controls.Add(this.label8);
-            this.tabPageCadastroRapido.Controls.Add(this.txtCadastroRapidoNome);
+            this.tabPageCadastroRapido.Controls.Add(this.txtCadastroRapidoNome01);
             this.tabPageCadastroRapido.Controls.Add(this.label9);
             this.tabPageCadastroRapido.Location = new System.Drawing.Point(4, 34);
             this.tabPageCadastroRapido.Name = "tabPageCadastroRapido";
@@ -387,35 +703,170 @@
             this.tabPageCadastroRapido.Text = "Cadastro Rápido 01";
             this.tabPageCadastroRapido.UseVisualStyleBackColor = true;
             // 
-            // btnCadastroRapido001
+            // btnCancelarCadastrorapido01
             // 
-            this.btnCadastroRapido001.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastroRapido001.Location = new System.Drawing.Point(37, 358);
-            this.btnCadastroRapido001.Name = "btnCadastroRapido001";
-            this.btnCadastroRapido001.Size = new System.Drawing.Size(274, 52);
-            this.btnCadastroRapido001.TabIndex = 20;
-            this.btnCadastroRapido001.Text = "Cadastro Rápido 01";
-            this.btnCadastroRapido001.UseVisualStyleBackColor = true;
-            this.btnCadastroRapido001.Click += new System.EventHandler(this.btnCadastroRapido_Click);
+            this.btnCancelarCadastrorapido01.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelarCadastrorapido01.Location = new System.Drawing.Point(46, 380);
+            this.btnCancelarCadastrorapido01.Name = "btnCancelarCadastrorapido01";
+            this.btnCancelarCadastrorapido01.Size = new System.Drawing.Size(274, 52);
+            this.btnCancelarCadastrorapido01.TabIndex = 25;
+            this.btnCancelarCadastrorapido01.Text = "Cancelar";
+            this.btnCancelarCadastrorapido01.UseVisualStyleBackColor = true;
+            this.btnCancelarCadastrorapido01.Click += new System.EventHandler(this.btnCancelarCadastrorapido01_Click);
             // 
-            // ckbCadastroRapidoMullher
+            // cbCadastroRapidoCor01
             // 
-            this.ckbCadastroRapidoMullher.AutoSize = true;
-            this.ckbCadastroRapidoMullher.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckbCadastroRapidoMullher.Location = new System.Drawing.Point(342, 56);
-            this.ckbCadastroRapidoMullher.Name = "ckbCadastroRapidoMullher";
-            this.ckbCadastroRapidoMullher.Size = new System.Drawing.Size(82, 24);
-            this.ckbCadastroRapidoMullher.TabIndex = 19;
-            this.ckbCadastroRapidoMullher.Text = "Mulher";
-            this.ckbCadastroRapidoMullher.UseVisualStyleBackColor = true;
+            this.cbCadastroRapidoCor01.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCadastroRapidoCor01.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCadastroRapidoCor01.FormattingEnabled = true;
+            this.cbCadastroRapidoCor01.Items.AddRange(new object[] {
+            "Abóbora",
+            "Açafrão",
+            "Amarelo",
+            "Âmbar",
+            "Ameixa",
+            "Amêndoa",
+            "Ametista",
+            "Anil",
+            "Azul",
+            "Bege",
+            "Bordô",
+            "Branco",
+            "Bronze",
+            "Cáqui",
+            "Caramelo",
+            "Carmesim",
+            "Carmim",
+            "Castanho",
+            "Cereja",
+            "Chocolate",
+            "Ciano ",
+            "Cinza",
+            "Cinzento",
+            "Cobre",
+            "Coral",
+            "Creme",
+            "Damasco",
+            "Dourado",
+            "Escarlate",
+            "Esmeralda",
+            "Ferrugem",
+            "Fúcsia",
+            "Gelo",
+            "Grená",
+            "Gris",
+            "Índigo",
+            "Jade",
+            "Jambo",
+            "Laranja",
+            "Lavanda",
+            "Lilás ",
+            "Limão",
+            "Loiro",
+            "Magenta",
+            "Malva",
+            "Marfim",
+            "Marrom",
+            "Mostarda",
+            "Negro",
+            "Ocre",
+            "Oliva",
+            "Ouro",
+            "Pêssego",
+            "Prata",
+            "Preto",
+            "Púrpura",
+            "Rosa",
+            "Roxo",
+            "Rubro",
+            "Salmão",
+            "Sépia",
+            "Terracota",
+            "Tijolo",
+            "Turquesa",
+            "Uva",
+            "Verde",
+            "Vermelho",
+            "Vinho",
+            "Violeta",
+            "Amarelo-avermelhado",
+            "Amarelo-canário",
+            "Amarelo-cinzento",
+            "Amarelo-enxofre",
+            "Amarelo-esverdeado",
+            "Amarelo-fosco",
+            "Amarelo-gualdo",
+            "Amarelo-limão",
+            "Amarelo-ocre",
+            "Amarelo-ouro",
+            "Amarelo-palha",
+            "Amarelo-torrado",
+            "Azul-ardósia",
+            "Azul-celeste",
+            "Azul-cobalto",
+            "Azul-ferrete",
+            "Azul-marinho",
+            "Azul-pavão",
+            "Azul-petróleo",
+            "Azul-piscina",
+            "Azul-turquesa",
+            "Azul-violeta",
+            "Branco-sujo",
+            "Castanho-avermelhado",
+            "Cinza-ardósia",
+            "Cinzento-azulado",
+            "Cinzento-pérola",
+            "Rosa-bebê",
+            "Rosa-choque",
+            "Verde-abacate",
+            "Verde-água",
+            "Verde-alface",
+            "Verde-amarelo",
+            "Verde-azul",
+            "Verde-bandeira",
+            "Verde-bronze",
+            "Verde-cinza",
+            "Verde-esmeralda",
+            "Verde-garrafa",
+            "Verde-mar",
+            "Verde-militar",
+            "Verde-musgo",
+            "Verde-oliva",
+            "Vermelho-alaranjado",
+            "Vermelho-cereja",
+            "Vermelho-púrpura",
+            "Vermelho-tostado",
+            "Amarelo-claro",
+            "Amarelo-escuro",
+            "Azul-claro",
+            "Azul-escuro",
+            "Castanho-claro",
+            "Castanho-escuro",
+            "Cinza-claro",
+            "Cinza-escuro",
+            "Laranja-claro",
+            "Laranja-escuro",
+            "Marrom-claro",
+            "Marrom-escuro",
+            "Rosa-claro",
+            "Rosa-escuro",
+            "Verde-claro",
+            "Verde-escuro"});
+            this.cbCadastroRapidoCor01.Location = new System.Drawing.Point(37, 173);
+            this.cbCadastroRapidoCor01.Name = "cbCadastroRapidoCor01";
+            this.cbCadastroRapidoCor01.Size = new System.Drawing.Size(249, 24);
+            this.cbCadastroRapidoCor01.TabIndex = 24;
             // 
-            // txtCadastroRapidoCor
+            // btnSalvarRapido01
             // 
-            this.txtCadastroRapidoCor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCadastroRapidoCor.Location = new System.Drawing.Point(37, 173);
-            this.txtCadastroRapidoCor.Name = "txtCadastroRapidoCor";
-            this.txtCadastroRapidoCor.Size = new System.Drawing.Size(249, 22);
-            this.txtCadastroRapidoCor.TabIndex = 18;
+            this.btnSalvarRapido01.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvarRapido01.Location = new System.Drawing.Point(326, 380);
+            this.btnSalvarRapido01.Name = "btnSalvarRapido01";
+            this.btnSalvarRapido01.Size = new System.Drawing.Size(274, 52);
+            this.btnSalvarRapido01.TabIndex = 20;
+            this.btnSalvarRapido01.Text = "Salvar";
+            this.btnSalvarRapido01.UseVisualStyleBackColor = true;
+            this.btnSalvarRapido01.Click += new System.EventHandler(this.btnSalvarRapido01_Click);
             // 
             // label7
             // 
@@ -427,13 +878,13 @@
             this.label7.TabIndex = 17;
             this.label7.Text = "Cor";
             // 
-            // txtCadastroRapidoFamilia
+            // txtCadastroRapidoFamilia01
             // 
-            this.txtCadastroRapidoFamilia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCadastroRapidoFamilia.Location = new System.Drawing.Point(37, 116);
-            this.txtCadastroRapidoFamilia.Name = "txtCadastroRapidoFamilia";
-            this.txtCadastroRapidoFamilia.Size = new System.Drawing.Size(249, 22);
-            this.txtCadastroRapidoFamilia.TabIndex = 16;
+            this.txtCadastroRapidoFamilia01.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCadastroRapidoFamilia01.Location = new System.Drawing.Point(37, 116);
+            this.txtCadastroRapidoFamilia01.Name = "txtCadastroRapidoFamilia01";
+            this.txtCadastroRapidoFamilia01.Size = new System.Drawing.Size(249, 22);
+            this.txtCadastroRapidoFamilia01.TabIndex = 16;
             // 
             // label8
             // 
@@ -445,13 +896,13 @@
             this.label8.TabIndex = 15;
             this.label8.Text = "Familia";
             // 
-            // txtCadastroRapidoNome
+            // txtCadastroRapidoNome01
             // 
-            this.txtCadastroRapidoNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCadastroRapidoNome.Location = new System.Drawing.Point(37, 58);
-            this.txtCadastroRapidoNome.Name = "txtCadastroRapidoNome";
-            this.txtCadastroRapidoNome.Size = new System.Drawing.Size(249, 22);
-            this.txtCadastroRapidoNome.TabIndex = 14;
+            this.txtCadastroRapidoNome01.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCadastroRapidoNome01.Location = new System.Drawing.Point(37, 58);
+            this.txtCadastroRapidoNome01.Name = "txtCadastroRapidoNome01";
+            this.txtCadastroRapidoNome01.Size = new System.Drawing.Size(249, 22);
+            this.txtCadastroRapidoNome01.TabIndex = 14;
             // 
             // label9
             // 
@@ -463,34 +914,15 @@
             this.label9.TabIndex = 13;
             this.label9.Text = "Nome";
             // 
-            // btnCadastroRapido01
-            // 
-            this.btnCadastroRapido01.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastroRapido01.Location = new System.Drawing.Point(6, 84);
-            this.btnCadastroRapido01.Name = "btnCadastroRapido01";
-            this.btnCadastroRapido01.Size = new System.Drawing.Size(242, 40);
-            this.btnCadastroRapido01.TabIndex = 21;
-            this.btnCadastroRapido01.Text = "Cadastro Rápido 01";
-            this.btnCadastroRapido01.UseVisualStyleBackColor = true;
-            // 
-            // btnCadastroRapido02
-            // 
-            this.btnCadastroRapido02.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastroRapido02.Location = new System.Drawing.Point(254, 84);
-            this.btnCadastroRapido02.Name = "btnCadastroRapido02";
-            this.btnCadastroRapido02.Size = new System.Drawing.Size(242, 40);
-            this.btnCadastroRapido02.TabIndex = 22;
-            this.btnCadastroRapido02.Text = "Cadastro Rápido 02";
-            this.btnCadastroRapido02.UseVisualStyleBackColor = true;
-            // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.btnCadastroRapido002);
-            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.btnCancelarCadastrorapido02);
+            this.tabPage1.Controls.Add(this.cbCadastroRapidCoro02);
+            this.tabPage1.Controls.Add(this.btnSalvarRapido02);
             this.tabPage1.Controls.Add(this.label10);
-            this.tabPage1.Controls.Add(this.textBox2);
+            this.tabPage1.Controls.Add(this.txtCadastrorapidoFamilia02);
             this.tabPage1.Controls.Add(this.label11);
-            this.tabPage1.Controls.Add(this.textBox3);
+            this.tabPage1.Controls.Add(this.txtCadastroRapidoNome02);
             this.tabPage1.Controls.Add(this.label12);
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
@@ -500,13 +932,170 @@
             this.tabPage1.Text = "Cadastro Rápido 02";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // btnCancelarCadastrorapido02
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(35, 171);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(249, 22);
-            this.textBox1.TabIndex = 24;
+            this.btnCancelarCadastrorapido02.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelarCadastrorapido02.Location = new System.Drawing.Point(35, 375);
+            this.btnCancelarCadastrorapido02.Name = "btnCancelarCadastrorapido02";
+            this.btnCancelarCadastrorapido02.Size = new System.Drawing.Size(274, 52);
+            this.btnCancelarCadastrorapido02.TabIndex = 27;
+            this.btnCancelarCadastrorapido02.Text = "Cancelar";
+            this.btnCancelarCadastrorapido02.UseVisualStyleBackColor = true;
+            this.btnCancelarCadastrorapido02.Click += new System.EventHandler(this.btnCancelarCadastrorapido02_Click);
+            // 
+            // cbCadastroRapidCoro02
+            // 
+            this.cbCadastroRapidCoro02.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCadastroRapidCoro02.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCadastroRapidCoro02.FormattingEnabled = true;
+            this.cbCadastroRapidCoro02.Items.AddRange(new object[] {
+            "Abóbora",
+            "Açafrão",
+            "Amarelo",
+            "Âmbar",
+            "Ameixa",
+            "Amêndoa",
+            "Ametista",
+            "Anil",
+            "Azul",
+            "Bege",
+            "Bordô",
+            "Branco",
+            "Bronze",
+            "Cáqui",
+            "Caramelo",
+            "Carmesim",
+            "Carmim",
+            "Castanho",
+            "Cereja",
+            "Chocolate",
+            "Ciano ",
+            "Cinza",
+            "Cinzento",
+            "Cobre",
+            "Coral",
+            "Creme",
+            "Damasco",
+            "Dourado",
+            "Escarlate",
+            "Esmeralda",
+            "Ferrugem",
+            "Fúcsia",
+            "Gelo",
+            "Grená",
+            "Gris",
+            "Índigo",
+            "Jade",
+            "Jambo",
+            "Laranja",
+            "Lavanda",
+            "Lilás ",
+            "Limão",
+            "Loiro",
+            "Magenta",
+            "Malva",
+            "Marfim",
+            "Marrom",
+            "Mostarda",
+            "Negro",
+            "Ocre",
+            "Oliva",
+            "Ouro",
+            "Pêssego",
+            "Prata",
+            "Preto",
+            "Púrpura",
+            "Rosa",
+            "Roxo",
+            "Rubro",
+            "Salmão",
+            "Sépia",
+            "Terracota",
+            "Tijolo",
+            "Turquesa",
+            "Uva",
+            "Verde",
+            "Vermelho",
+            "Vinho",
+            "Violeta",
+            "Amarelo-avermelhado",
+            "Amarelo-canário",
+            "Amarelo-cinzento",
+            "Amarelo-enxofre",
+            "Amarelo-esverdeado",
+            "Amarelo-fosco",
+            "Amarelo-gualdo",
+            "Amarelo-limão",
+            "Amarelo-ocre",
+            "Amarelo-ouro",
+            "Amarelo-palha",
+            "Amarelo-torrado",
+            "Azul-ardósia",
+            "Azul-celeste",
+            "Azul-cobalto",
+            "Azul-ferrete",
+            "Azul-marinho",
+            "Azul-pavão",
+            "Azul-petróleo",
+            "Azul-piscina",
+            "Azul-turquesa",
+            "Azul-violeta",
+            "Branco-sujo",
+            "Castanho-avermelhado",
+            "Cinza-ardósia",
+            "Cinzento-azulado",
+            "Cinzento-pérola",
+            "Rosa-bebê",
+            "Rosa-choque",
+            "Verde-abacate",
+            "Verde-água",
+            "Verde-alface",
+            "Verde-amarelo",
+            "Verde-azul",
+            "Verde-bandeira",
+            "Verde-bronze",
+            "Verde-cinza",
+            "Verde-esmeralda",
+            "Verde-garrafa",
+            "Verde-mar",
+            "Verde-militar",
+            "Verde-musgo",
+            "Verde-oliva",
+            "Vermelho-alaranjado",
+            "Vermelho-cereja",
+            "Vermelho-púrpura",
+            "Vermelho-tostado",
+            "Amarelo-claro",
+            "Amarelo-escuro",
+            "Azul-claro",
+            "Azul-escuro",
+            "Castanho-claro",
+            "Castanho-escuro",
+            "Cinza-claro",
+            "Cinza-escuro",
+            "Laranja-claro",
+            "Laranja-escuro",
+            "Marrom-claro",
+            "Marrom-escuro",
+            "Rosa-claro",
+            "Rosa-escuro",
+            "Verde-claro",
+            "Verde-escuro"});
+            this.cbCadastroRapidCoro02.Location = new System.Drawing.Point(35, 171);
+            this.cbCadastroRapidCoro02.Name = "cbCadastroRapidCoro02";
+            this.cbCadastroRapidCoro02.Size = new System.Drawing.Size(249, 24);
+            this.cbCadastroRapidCoro02.TabIndex = 26;
+            // 
+            // btnSalvarRapido02
+            // 
+            this.btnSalvarRapido02.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvarRapido02.Location = new System.Drawing.Point(315, 375);
+            this.btnSalvarRapido02.Name = "btnSalvarRapido02";
+            this.btnSalvarRapido02.Size = new System.Drawing.Size(274, 52);
+            this.btnSalvarRapido02.TabIndex = 25;
+            this.btnSalvarRapido02.Text = "Salvar";
+            this.btnSalvarRapido02.UseVisualStyleBackColor = true;
+            this.btnSalvarRapido02.Click += new System.EventHandler(this.btnSalvarRapido02_Click);
             // 
             // label10
             // 
@@ -518,13 +1107,13 @@
             this.label10.TabIndex = 23;
             this.label10.Text = "Cor";
             // 
-            // textBox2
+            // txtCadastrorapidoFamilia02
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(35, 114);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(249, 22);
-            this.textBox2.TabIndex = 22;
+            this.txtCadastrorapidoFamilia02.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCadastrorapidoFamilia02.Location = new System.Drawing.Point(35, 114);
+            this.txtCadastrorapidoFamilia02.Name = "txtCadastrorapidoFamilia02";
+            this.txtCadastrorapidoFamilia02.Size = new System.Drawing.Size(249, 22);
+            this.txtCadastrorapidoFamilia02.TabIndex = 22;
             // 
             // label11
             // 
@@ -536,13 +1125,13 @@
             this.label11.TabIndex = 21;
             this.label11.Text = "Familia";
             // 
-            // textBox3
+            // txtCadastroRapidoNome02
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(35, 56);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(249, 22);
-            this.textBox3.TabIndex = 20;
+            this.txtCadastroRapidoNome02.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCadastroRapidoNome02.Location = new System.Drawing.Point(35, 56);
+            this.txtCadastroRapidoNome02.Name = "txtCadastroRapidoNome02";
+            this.txtCadastroRapidoNome02.Size = new System.Drawing.Size(249, 22);
+            this.txtCadastroRapidoNome02.TabIndex = 20;
             // 
             // label12
             // 
@@ -554,15 +1143,16 @@
             this.label12.TabIndex = 19;
             this.label12.Text = "Nome";
             // 
-            // btnCadastroRapido002
+            // cbCadastroRapidoMulher
             // 
-            this.btnCadastroRapido002.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastroRapido002.Location = new System.Drawing.Point(35, 355);
-            this.btnCadastroRapido002.Name = "btnCadastroRapido002";
-            this.btnCadastroRapido002.Size = new System.Drawing.Size(274, 52);
-            this.btnCadastroRapido002.TabIndex = 25;
-            this.btnCadastroRapido002.Text = "Cadastro Rápido 02";
-            this.btnCadastroRapido002.UseVisualStyleBackColor = true;
+            this.cbCadastroRapidoMulher.AutoSize = true;
+            this.cbCadastroRapidoMulher.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCadastroRapidoMulher.Location = new System.Drawing.Point(409, 56);
+            this.cbCadastroRapidoMulher.Name = "cbCadastroRapidoMulher";
+            this.cbCadastroRapidoMulher.Size = new System.Drawing.Size(82, 24);
+            this.cbCadastroRapidoMulher.TabIndex = 29;
+            this.cbCadastroRapidoMulher.Text = "Mulher";
+            this.cbCadastroRapidoMulher.UseVisualStyleBackColor = true;
             // 
             // ListaFada
             // 
@@ -602,22 +1192,15 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtTamanhoAsa;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtElemento;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.CheckBox ckbFazBarulho;
-        private System.Windows.Forms.CheckBox ckbMulher;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.Button btnCadastroRapido001;
-        private System.Windows.Forms.CheckBox ckbCadastroRapidoMullher;
-        private System.Windows.Forms.TextBox txtCadastroRapidoCor;
+        private System.Windows.Forms.Button btnSalvarRapido01;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtCadastroRapidoFamilia;
+        private System.Windows.Forms.TextBox txtCadastroRapidoFamilia01;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtCadastroRapidoNome;
+        private System.Windows.Forms.TextBox txtCadastroRapidoNome01;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtCorAsa;
-        private System.Windows.Forms.TextBox txtCor;
         private System.Windows.Forms.TextBox txtFamilia;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNome;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnFamilia;
@@ -626,12 +1209,22 @@
         private System.Windows.Forms.Button btnCadastroRapido02;
         private System.Windows.Forms.Button btnCadastroRapido01;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtCadastrorapidoFamilia02;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtCadastroRapidoNome02;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button btnCadastroRapido002;
+        private System.Windows.Forms.Button btnSalvarRapido02;
+        private System.Windows.Forms.ComboBox cbCor;
+        private System.Windows.Forms.ComboBox cbCorAsa;
+        private System.Windows.Forms.ComboBox cbElemento;
+        private System.Windows.Forms.ComboBox cbCadastroRapidoCor01;
+        private System.Windows.Forms.ComboBox cbCadastroRapidCoro02;
+        private System.Windows.Forms.Button btnCancelarCadastrorapido01;
+        private System.Windows.Forms.Button btnCancelarCadastrorapido02;
+        private System.Windows.Forms.CheckBox ckbFazBarulho;
+        private System.Windows.Forms.CheckBox ckbAsaQuebrada;
+        private System.Windows.Forms.CheckBox ckbMulher;
+        private System.Windows.Forms.CheckBox cbCadastroRapidoMulher;
     }
 }

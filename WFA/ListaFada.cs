@@ -28,20 +28,28 @@ namespace WFA
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            LimparCampos();
+            DialogResult result = MessageBox.Show("Você realmente deseja cancelar o cadastro ?", "AVISO",
+                MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                LimparCampos();
+                tabControl1.SelectedIndex = 0;
+            }
         }
 
         private void LimparCampos()
         {
             txtNome.Text = "";
             txtTamanhoAsa.Text = "";
-            txtElemento.Text = "";
             txtFamilia.Text = "";
-            txtCor.Text = "";
-            txtCorAsa.Text = "";
             txtTamanhoAsa.Text = "";
+            cbElemento.SelectedIndex = -1;
+            cbCor.SelectedIndex = -1 ;
+            cbCorAsa.SelectedIndex = -1;
             ckbFazBarulho.Checked = false;
-            ckbMulher.Checked = false;
+            ckbMulher.Checked = false;            
+            ckbAsaQuebrada.Checked = false;
+
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
@@ -52,11 +60,12 @@ namespace WFA
                 {
                     Nome = txtNome.Text,
                     Familia = txtFamilia.Text,
-                    Cor = txtCor.Text,
-                    CorAsa = txtCorAsa.Text,
-                    Elemento = txtElemento.Text,
+                    Cor = cbCor.SelectedItem.ToString(),
+                    CorAsa = cbCorAsa.SelectedItem.ToString(),
+                    Elemento = cbElemento.SelectedItem.ToString(),
                     Mulher = ckbMulher.Checked,
                     FazBarulho = ckbFazBarulho.Checked,
+                    AsaQuebrada = ckbAsaQuebrada.Checked,                   
                     TamanhoAsa = Convert.ToDouble(txtTamanhoAsa.Text)
                 };
                 if (nomeAntigo == "") 
@@ -158,19 +167,57 @@ namespace WFA
                 {
                     txtNome.Text = fada.Nome;
                     txtFamilia.Text = fada.Familia;
-                    txtCor.Text = fada.Cor;
-                    txtCorAsa.Text = fada.CorAsa;
-                    txtElemento.Text = fada.Elemento;
+                    cbCor.Text = fada.Cor;
+                    cbCorAsa.Text = fada.CorAsa;
+                    cbElemento.Text = fada.Elemento;
                     ckbMulher.Checked = true;
                     ckbFazBarulho.Checked = true;
+                    ckbAsaQuebrada.Checked = true;
                     txtTamanhoAsa.Text = Convert.ToString(fada.TamanhoAsa);
                 }
             }
         }
 
-        private void btnCadastroRapido_Click(object sender, EventArgs e)
+        private void btnCadastroRapido01_Click(object sender, EventArgs e)
         {
-            Fada fada = new Fada(txtCadastroRapidoNome.Text, txtCadastroRapidoFamilia.Text, txtCadastroRapidoCor.Text);
+            tabControl1.SelectedIndex = 2;
+        }
+
+        private void btnCadastroRapido02_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 3;
+        }
+
+        private void btnSalvarRapido01_Click(object sender, EventArgs e)
+        {
+            FadaRapido fadaRapido = new FadaRapido(txtNome.Text, txtFamilia.Text, cbCor.Text);
+        }
+
+        private void btnSalvarRapido02_Click(object sender, EventArgs e)
+        {
+            FadaRapido fadaRapido = new FadaRapido(txtNome.Text, txtFamilia.Text, ckbMulher.Checked);
+        }
+
+        private void btnCancelarCadastrorapido01_Click(object sender, EventArgs e)
+        {            
+            DialogResult result = MessageBox.Show("Você realmente deseja cancelar o cadastro ?", "AVISO",
+                MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                LimparCampos();
+                tabControl1.SelectedIndex = 0;
+            }
+        }
+
+        private void btnCancelarCadastrorapido02_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Você realmente deseja cancelar o cadastro ?", "AVISO",
+                MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                LimparCampos();
+                tabControl1.SelectedIndex = 0;
+            }
         }
     }
 

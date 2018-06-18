@@ -24,3 +24,14 @@ C:\Users\Junior Zeh\Documents\GitHub\ExercicioFada\WFA\obj\Debug\WFA.csproj.Core
 C:\Users\Junior Zeh\Documents\GitHub\ExercicioFada\WFA\obj\Debug\WFA.csproj.CopyComplete
 C:\Users\Junior Zeh\Documents\GitHub\ExercicioFada\WFA\obj\Debug\WFA.exe
 C:\Users\Junior Zeh\Documents\GitHub\ExercicioFada\WFA\obj\Debug\WFA.pdb
+C:\Users\104895\Documents\GitHub\ExercicioFada\WFA\bin\Debug\WFA.exe.config
+C:\Users\104895\Documents\GitHub\ExercicioFada\WFA\obj\Debug\WFA.exe
+C:\Users\104895\Documents\GitHub\ExercicioFada\WFA\obj\Debug\WFA.pdb
+C:\Users\104895\Documents\GitHub\ExercicioFada\WFA\obj\Debug\WFA.csprojResolveAssemblyReference.cache
+C:\Users\104895\Documents\GitHub\ExercicioFada\WFA\obj\Debug\WFA.ListaFada.resources
+C:\Users\104895\Documents\GitHub\ExercicioFada\WFA\obj\Debug\WFA.Properties.Resources.resources
+C:\Users\104895\Documents\GitHub\ExercicioFada\WFA\obj\Debug\WFA.csproj.GenerateResource.Cache
+C:\Users\104895\Documents\GitHub\ExercicioFada\WFA\bin\Debug\WFA.exe
+C:\Users\104895\Documents\GitHub\ExercicioFada\WFA\bin\Debug\WFA.pdb
+C:\Users\104895\Documents\GitHub\ExercicioFada\WFA\bin\Debug\Model.dll
+C:\Users\104895\Documents\GitHub\ExercicioFada\WFA\bin\Debug\Model.pdb

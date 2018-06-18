@@ -15,6 +15,7 @@ namespace WFA
     {
         string nomeAntigo  = string.Empty;
         List<Fada> fadas = new List<Fada>();
+        List<FadaRapido> fadaRapidos = new List<FadaRapido>();
 
         public ListaFada()
         {
@@ -56,6 +57,22 @@ namespace WFA
         {
             try
             {
+                if (txtNome == null)
+                {
+                    throw new Exception("Nome deve ser preenchido");
+                }
+            }
+            catch (Exception e1)
+            {
+                MessageBox.Show(e1.Message);
+            }
+            
+
+            
+         
+
+            try
+            {
                 Fada fada = new Fada()
                 {
                     Nome = txtNome.Text,
@@ -72,6 +89,8 @@ namespace WFA
                 {
                     fadas.Add(fada);
                     MessageBox.Show("Cadastrado com Sucesso");
+                    AdicionarFadaNaTabela(fada);
+                    
                 }
                 else
                 {
@@ -190,12 +209,68 @@ namespace WFA
 
         private void btnSalvarRapido01_Click(object sender, EventArgs e)
         {
-            FadaRapido fadaRapido = new FadaRapido(txtNome.Text, txtFamilia.Text, cbCor.Text);
+            FadaRapido fadaRapido = new FadaRapido(txtCadastroRapidoNome01.Text, txtCadastroRapidoFamilia01.Text, 
+                cbCadastroRapidoCor01.SelectedItem.ToString());
+            if (nomeAntigo == "")
+            {                
+                fadaRapidos.Add(fadaRapido);
+                MessageBox.Show("Cadastrado com Sucesso");
+                AdicionarFadaRapidoNaTabela(fadaRapido);
+
+            }
+            else
+            {
+                int linha = fadas.FindIndex(x => x.Nome == nomeAntigo);
+                fadaRapidos[linha] = fadaRapido;
+                EditarFadaNaTabela(fadaRapido, linha);
+                MessageBox.Show("Alterado com sucesso");
+                nomeAntigo = string.Empty;
+
+            }
+
+            LimparCampos();
+            tabControl1.SelectedIndex = 0;
+            
+        }
+
+        private void EditarFadaNaTabela(FadaRapido fadaRapido, int linha)
+        {
+            dataGridView1.Rows[linha].Cells[0].Value = fadaRapido.NomeRapido;
+            dataGridView1.Rows[linha].Cells[1].Value = fadaRapido.FamiliaRapido;
+            dataGridView1.Rows[linha].Cells[2].Value = fadaRapido.CorRapido;
+        }
+
+        private void AdicionarFadaRapidoNaTabela(FadaRapido fadaRapido)
+        {
+            dataGridView1.Rows.Add(new Object[]{
+                fadaRapido.NomeRapido, fadaRapido.FamiliaRapido, fadaRapido.CorRapido, ""
+                });
         }
 
         private void btnSalvarRapido02_Click(object sender, EventArgs e)
         {
-            FadaRapido fadaRapido = new FadaRapido(txtNome.Text, txtFamilia.Text, ckbMulher.Checked);
+            FadaRapido fadaRapido = new FadaRapido(txtCadastroRapidoNome02.Text, txtCadastrorapidoFamilia02.Text, 
+                cbCadastroRapidCoro02.SelectedItem.ToString());
+            if (nomeAntigo == "")
+            {
+                fadaRapidos.Add(fadaRapido);
+                MessageBox.Show("Cadastrado com Sucesso");
+                AdicionarFadaRapidoNaTabela(fadaRapido);
+
+            }
+            else
+            {
+                int linha = fadas.FindIndex(x => x.Nome == nomeAntigo);
+                fadaRapidos[linha] = fadaRapido;
+                EditarFadaNaTabela(fadaRapido, linha);
+                MessageBox.Show("Alterado com sucesso");
+                nomeAntigo = string.Empty;
+
+            }
+
+            LimparCampos();
+            tabControl1.SelectedIndex = 0;
+
         }
 
         private void btnCancelarCadastrorapido01_Click(object sender, EventArgs e)
@@ -218,6 +293,11 @@ namespace WFA
                 LimparCampos();
                 tabControl1.SelectedIndex = 0;
             }
+        }
+
+        private void tabPageCadastro_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

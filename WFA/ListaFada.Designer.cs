@@ -76,7 +76,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txtCadastroRapidoNome02 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.cbCadastroRapidoMulher = new System.Windows.Forms.CheckBox();
+            this.ckbCadastroRapidoMulher = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPageLista.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -148,6 +148,7 @@
             this.btnEditar.TabIndex = 3;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+           
             // 
             // btnApagar
             // 
@@ -242,6 +243,7 @@
             this.tabPageCadastro.TabIndex = 1;
             this.tabPageCadastro.Text = "Cadastar Fada";
             this.tabPageCadastro.UseVisualStyleBackColor = true;
+            this.tabPageCadastro.Click += new System.EventHandler(this.tabPageCadastro_Click);
             // 
             // ckbFazBarulho
             // 
@@ -686,7 +688,7 @@
             // 
             // tabPageCadastroRapido
             // 
-            this.tabPageCadastroRapido.Controls.Add(this.cbCadastroRapidoMulher);
+            this.tabPageCadastroRapido.Controls.Add(this.ckbCadastroRapidoMulher);
             this.tabPageCadastroRapido.Controls.Add(this.btnCancelarCadastrorapido01);
             this.tabPageCadastroRapido.Controls.Add(this.cbCadastroRapidoCor01);
             this.tabPageCadastroRapido.Controls.Add(this.btnSalvarRapido01);
@@ -1143,16 +1145,16 @@
             this.label12.TabIndex = 19;
             this.label12.Text = "Nome";
             // 
-            // cbCadastroRapidoMulher
+            // ckbCadastroRapidoMulher
             // 
-            this.cbCadastroRapidoMulher.AutoSize = true;
-            this.cbCadastroRapidoMulher.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbCadastroRapidoMulher.Location = new System.Drawing.Point(409, 56);
-            this.cbCadastroRapidoMulher.Name = "cbCadastroRapidoMulher";
-            this.cbCadastroRapidoMulher.Size = new System.Drawing.Size(82, 24);
-            this.cbCadastroRapidoMulher.TabIndex = 29;
-            this.cbCadastroRapidoMulher.Text = "Mulher";
-            this.cbCadastroRapidoMulher.UseVisualStyleBackColor = true;
+            this.ckbCadastroRapidoMulher.AutoSize = true;
+            this.ckbCadastroRapidoMulher.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbCadastroRapidoMulher.Location = new System.Drawing.Point(409, 56);
+            this.ckbCadastroRapidoMulher.Name = "ckbCadastroRapidoMulher";
+            this.ckbCadastroRapidoMulher.Size = new System.Drawing.Size(82, 24);
+            this.ckbCadastroRapidoMulher.TabIndex = 29;
+            this.ckbCadastroRapidoMulher.Text = "Mulher";
+            this.ckbCadastroRapidoMulher.UseVisualStyleBackColor = true;
             // 
             // ListaFada
             // 
@@ -1225,6 +1227,6 @@
         private System.Windows.Forms.CheckBox ckbFazBarulho;
         private System.Windows.Forms.CheckBox ckbAsaQuebrada;
         private System.Windows.Forms.CheckBox ckbMulher;
-        private System.Windows.Forms.CheckBox cbCadastroRapidoMulher;
+        private System.Windows.Forms.CheckBox ckbCadastroRapidoMulher;
     }
 }

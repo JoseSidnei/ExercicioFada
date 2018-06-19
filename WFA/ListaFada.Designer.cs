@@ -36,10 +36,6 @@
             this.btnApagar = new System.Windows.Forms.Button();
             this.btnAdicionar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnFamilia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnElemento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPageCadastro = new System.Windows.Forms.TabPage();
             this.ckbFazBarulho = new System.Windows.Forms.CheckBox();
             this.ckbAsaQuebrada = new System.Windows.Forms.CheckBox();
@@ -59,24 +55,27 @@
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPageCadastroRapido = new System.Windows.Forms.TabPage();
+            this.ckbCadastroRapidoMulher = new System.Windows.Forms.CheckBox();
             this.btnCancelarCadastrorapido01 = new System.Windows.Forms.Button();
             this.cbCadastroRapidoCor01 = new System.Windows.Forms.ComboBox();
             this.btnSalvarRapido01 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtCadastroRapidoFamilia01 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.txtCadastroRapidoNome01 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnCancelarCadastrorapido02 = new System.Windows.Forms.Button();
-            this.cbCadastroRapidCoro02 = new System.Windows.Forms.ComboBox();
+            this.cbCadastroRapidoCor02 = new System.Windows.Forms.ComboBox();
             this.btnSalvarRapido02 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtCadastrorapidoFamilia02 = new System.Windows.Forms.TextBox();
+            this.txtCadastroRapidoFamilia02 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtCadastroRapidoNome02 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.ckbCadastroRapidoMulher = new System.Windows.Forms.CheckBox();
+            this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnFamilia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnElemento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Columnmulher = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPageLista.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -96,7 +95,7 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(906, 501);
+            this.tabControl1.Size = new System.Drawing.Size(1185, 731);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl1.TabIndex = 0;
             // 
@@ -112,7 +111,7 @@
             this.tabPageLista.Location = new System.Drawing.Point(4, 34);
             this.tabPageLista.Name = "tabPageLista";
             this.tabPageLista.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageLista.Size = new System.Drawing.Size(898, 463);
+            this.tabPageLista.Size = new System.Drawing.Size(1177, 693);
             this.tabPageLista.TabIndex = 0;
             this.tabPageLista.Text = "Lista Fada";
             this.tabPageLista.UseVisualStyleBackColor = true;
@@ -120,7 +119,7 @@
             // btnCadastroRapido02
             // 
             this.btnCadastroRapido02.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastroRapido02.Location = new System.Drawing.Point(649, 84);
+            this.btnCadastroRapido02.Location = new System.Drawing.Point(929, 88);
             this.btnCadastroRapido02.Name = "btnCadastroRapido02";
             this.btnCadastroRapido02.Size = new System.Drawing.Size(242, 40);
             this.btnCadastroRapido02.TabIndex = 22;
@@ -131,7 +130,7 @@
             // btnCadastroRapido01
             // 
             this.btnCadastroRapido01.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastroRapido01.Location = new System.Drawing.Point(649, 38);
+            this.btnCadastroRapido01.Location = new System.Drawing.Point(929, 42);
             this.btnCadastroRapido01.Name = "btnCadastroRapido01";
             this.btnCadastroRapido01.Size = new System.Drawing.Size(242, 40);
             this.btnCadastroRapido01.TabIndex = 21;
@@ -148,7 +147,7 @@
             this.btnEditar.TabIndex = 3;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
-           
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click_1);
             // 
             // btnApagar
             // 
@@ -181,40 +180,13 @@
             this.ColumnNome,
             this.ColumnFamilia,
             this.ColumnCor,
-            this.ColumnElemento});
+            this.ColumnElemento,
+            this.Columnmulher});
             this.dataGridView1.Location = new System.Drawing.Point(6, 130);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(885, 339);
+            this.dataGridView1.Size = new System.Drawing.Size(1175, 567);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // ColumnNome
-            // 
-            this.ColumnNome.HeaderText = "Nome";
-            this.ColumnNome.Name = "ColumnNome";
-            this.ColumnNome.ReadOnly = true;
-            this.ColumnNome.Width = 200;
-            // 
-            // ColumnFamilia
-            // 
-            this.ColumnFamilia.HeaderText = "Familia";
-            this.ColumnFamilia.Name = "ColumnFamilia";
-            this.ColumnFamilia.ReadOnly = true;
-            this.ColumnFamilia.Width = 200;
-            // 
-            // ColumnCor
-            // 
-            this.ColumnCor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColumnCor.HeaderText = "Cor";
-            this.ColumnCor.Name = "ColumnCor";
-            this.ColumnCor.ReadOnly = true;
-            // 
-            // ColumnElemento
-            // 
-            this.ColumnElemento.HeaderText = "Elemento";
-            this.ColumnElemento.Name = "ColumnElemento";
-            this.ColumnElemento.ReadOnly = true;
-            this.ColumnElemento.Width = 200;
             // 
             // tabPageCadastro
             // 
@@ -239,11 +211,10 @@
             this.tabPageCadastro.Location = new System.Drawing.Point(4, 34);
             this.tabPageCadastro.Name = "tabPageCadastro";
             this.tabPageCadastro.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageCadastro.Size = new System.Drawing.Size(898, 463);
+            this.tabPageCadastro.Size = new System.Drawing.Size(1177, 693);
             this.tabPageCadastro.TabIndex = 1;
             this.tabPageCadastro.Text = "Cadastar Fada";
             this.tabPageCadastro.UseVisualStyleBackColor = true;
-            this.tabPageCadastro.Click += new System.EventHandler(this.tabPageCadastro_Click);
             // 
             // ckbFazBarulho
             // 
@@ -693,17 +664,26 @@
             this.tabPageCadastroRapido.Controls.Add(this.cbCadastroRapidoCor01);
             this.tabPageCadastroRapido.Controls.Add(this.btnSalvarRapido01);
             this.tabPageCadastroRapido.Controls.Add(this.label7);
-            this.tabPageCadastroRapido.Controls.Add(this.txtCadastroRapidoFamilia01);
-            this.tabPageCadastroRapido.Controls.Add(this.label8);
             this.tabPageCadastroRapido.Controls.Add(this.txtCadastroRapidoNome01);
             this.tabPageCadastroRapido.Controls.Add(this.label9);
             this.tabPageCadastroRapido.Location = new System.Drawing.Point(4, 34);
             this.tabPageCadastroRapido.Name = "tabPageCadastroRapido";
             this.tabPageCadastroRapido.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageCadastroRapido.Size = new System.Drawing.Size(898, 463);
+            this.tabPageCadastroRapido.Size = new System.Drawing.Size(1177, 693);
             this.tabPageCadastroRapido.TabIndex = 2;
             this.tabPageCadastroRapido.Text = "Cadastro Rápido 01";
             this.tabPageCadastroRapido.UseVisualStyleBackColor = true;
+            // 
+            // ckbCadastroRapidoMulher
+            // 
+            this.ckbCadastroRapidoMulher.AutoSize = true;
+            this.ckbCadastroRapidoMulher.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbCadastroRapidoMulher.Location = new System.Drawing.Point(409, 56);
+            this.ckbCadastroRapidoMulher.Name = "ckbCadastroRapidoMulher";
+            this.ckbCadastroRapidoMulher.Size = new System.Drawing.Size(82, 24);
+            this.ckbCadastroRapidoMulher.TabIndex = 29;
+            this.ckbCadastroRapidoMulher.Text = "Mulher";
+            this.ckbCadastroRapidoMulher.UseVisualStyleBackColor = true;
             // 
             // btnCancelarCadastrorapido01
             // 
@@ -854,7 +834,7 @@
             "Rosa-escuro",
             "Verde-claro",
             "Verde-escuro"});
-            this.cbCadastroRapidoCor01.Location = new System.Drawing.Point(37, 173);
+            this.cbCadastroRapidoCor01.Location = new System.Drawing.Point(37, 117);
             this.cbCadastroRapidoCor01.Name = "cbCadastroRapidoCor01";
             this.cbCadastroRapidoCor01.Size = new System.Drawing.Size(249, 24);
             this.cbCadastroRapidoCor01.TabIndex = 24;
@@ -874,29 +854,11 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(33, 150);
+            this.label7.Location = new System.Drawing.Point(33, 94);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(37, 20);
             this.label7.TabIndex = 17;
             this.label7.Text = "Cor";
-            // 
-            // txtCadastroRapidoFamilia01
-            // 
-            this.txtCadastroRapidoFamilia01.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCadastroRapidoFamilia01.Location = new System.Drawing.Point(37, 116);
-            this.txtCadastroRapidoFamilia01.Name = "txtCadastroRapidoFamilia01";
-            this.txtCadastroRapidoFamilia01.Size = new System.Drawing.Size(249, 22);
-            this.txtCadastroRapidoFamilia01.TabIndex = 16;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(33, 93);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(66, 20);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "Familia";
             // 
             // txtCadastroRapidoNome01
             // 
@@ -919,10 +881,10 @@
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.btnCancelarCadastrorapido02);
-            this.tabPage1.Controls.Add(this.cbCadastroRapidCoro02);
+            this.tabPage1.Controls.Add(this.cbCadastroRapidoCor02);
             this.tabPage1.Controls.Add(this.btnSalvarRapido02);
             this.tabPage1.Controls.Add(this.label10);
-            this.tabPage1.Controls.Add(this.txtCadastrorapidoFamilia02);
+            this.tabPage1.Controls.Add(this.txtCadastroRapidoFamilia02);
             this.tabPage1.Controls.Add(this.label11);
             this.tabPage1.Controls.Add(this.txtCadastroRapidoNome02);
             this.tabPage1.Controls.Add(this.label12);
@@ -945,12 +907,12 @@
             this.btnCancelarCadastrorapido02.UseVisualStyleBackColor = true;
             this.btnCancelarCadastrorapido02.Click += new System.EventHandler(this.btnCancelarCadastrorapido02_Click);
             // 
-            // cbCadastroRapidCoro02
+            // cbCadastroRapidoCor02
             // 
-            this.cbCadastroRapidCoro02.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbCadastroRapidCoro02.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbCadastroRapidCoro02.FormattingEnabled = true;
-            this.cbCadastroRapidCoro02.Items.AddRange(new object[] {
+            this.cbCadastroRapidoCor02.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCadastroRapidoCor02.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCadastroRapidoCor02.FormattingEnabled = true;
+            this.cbCadastroRapidoCor02.Items.AddRange(new object[] {
             "Abóbora",
             "Açafrão",
             "Amarelo",
@@ -1083,10 +1045,10 @@
             "Rosa-escuro",
             "Verde-claro",
             "Verde-escuro"});
-            this.cbCadastroRapidCoro02.Location = new System.Drawing.Point(35, 171);
-            this.cbCadastroRapidCoro02.Name = "cbCadastroRapidCoro02";
-            this.cbCadastroRapidCoro02.Size = new System.Drawing.Size(249, 24);
-            this.cbCadastroRapidCoro02.TabIndex = 26;
+            this.cbCadastroRapidoCor02.Location = new System.Drawing.Point(35, 171);
+            this.cbCadastroRapidoCor02.Name = "cbCadastroRapidoCor02";
+            this.cbCadastroRapidoCor02.Size = new System.Drawing.Size(249, 24);
+            this.cbCadastroRapidoCor02.TabIndex = 26;
             // 
             // btnSalvarRapido02
             // 
@@ -1109,13 +1071,13 @@
             this.label10.TabIndex = 23;
             this.label10.Text = "Cor";
             // 
-            // txtCadastrorapidoFamilia02
+            // txtCadastroRapidoFamilia02
             // 
-            this.txtCadastrorapidoFamilia02.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCadastrorapidoFamilia02.Location = new System.Drawing.Point(35, 114);
-            this.txtCadastrorapidoFamilia02.Name = "txtCadastrorapidoFamilia02";
-            this.txtCadastrorapidoFamilia02.Size = new System.Drawing.Size(249, 22);
-            this.txtCadastrorapidoFamilia02.TabIndex = 22;
+            this.txtCadastroRapidoFamilia02.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCadastroRapidoFamilia02.Location = new System.Drawing.Point(35, 114);
+            this.txtCadastroRapidoFamilia02.Name = "txtCadastroRapidoFamilia02";
+            this.txtCadastroRapidoFamilia02.Size = new System.Drawing.Size(249, 22);
+            this.txtCadastroRapidoFamilia02.TabIndex = 22;
             // 
             // label11
             // 
@@ -1145,25 +1107,50 @@
             this.label12.TabIndex = 19;
             this.label12.Text = "Nome";
             // 
-            // ckbCadastroRapidoMulher
+            // ColumnNome
             // 
-            this.ckbCadastroRapidoMulher.AutoSize = true;
-            this.ckbCadastroRapidoMulher.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckbCadastroRapidoMulher.Location = new System.Drawing.Point(409, 56);
-            this.ckbCadastroRapidoMulher.Name = "ckbCadastroRapidoMulher";
-            this.ckbCadastroRapidoMulher.Size = new System.Drawing.Size(82, 24);
-            this.ckbCadastroRapidoMulher.TabIndex = 29;
-            this.ckbCadastroRapidoMulher.Text = "Mulher";
-            this.ckbCadastroRapidoMulher.UseVisualStyleBackColor = true;
+            this.ColumnNome.HeaderText = "Nome";
+            this.ColumnNome.Name = "ColumnNome";
+            this.ColumnNome.ReadOnly = true;
+            this.ColumnNome.Width = 250;
+            // 
+            // ColumnFamilia
+            // 
+            this.ColumnFamilia.HeaderText = "Familia";
+            this.ColumnFamilia.Name = "ColumnFamilia";
+            this.ColumnFamilia.ReadOnly = true;
+            this.ColumnFamilia.Width = 250;
+            // 
+            // ColumnCor
+            // 
+            this.ColumnCor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColumnCor.HeaderText = "Cor";
+            this.ColumnCor.Name = "ColumnCor";
+            this.ColumnCor.ReadOnly = true;
+            // 
+            // ColumnElemento
+            // 
+            this.ColumnElemento.HeaderText = "Elemento";
+            this.ColumnElemento.Name = "ColumnElemento";
+            this.ColumnElemento.ReadOnly = true;
+            this.ColumnElemento.Width = 250;
+            // 
+            // Columnmulher
+            // 
+            this.Columnmulher.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Columnmulher.HeaderText = "Mulher";
+            this.Columnmulher.Name = "Columnmulher";
+            this.Columnmulher.ReadOnly = true;
             // 
             // ListaFada
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(925, 517);
+            this.ClientSize = new System.Drawing.Size(1219, 739);
             this.Controls.Add(this.tabControl1);
             this.Name = "ListaFada";
             this.Text = "Fada";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.tabControl1.ResumeLayout(false);
             this.tabPageLista.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -1199,20 +1186,14 @@
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnSalvarRapido01;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtCadastroRapidoFamilia01;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtCadastroRapidoNome01;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtFamilia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnFamilia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnElemento;
         private System.Windows.Forms.Button btnCadastroRapido02;
         private System.Windows.Forms.Button btnCadastroRapido01;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtCadastrorapidoFamilia02;
+        private System.Windows.Forms.TextBox txtCadastroRapidoFamilia02;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtCadastroRapidoNome02;
         private System.Windows.Forms.Label label12;
@@ -1221,12 +1202,17 @@
         private System.Windows.Forms.ComboBox cbCorAsa;
         private System.Windows.Forms.ComboBox cbElemento;
         private System.Windows.Forms.ComboBox cbCadastroRapidoCor01;
-        private System.Windows.Forms.ComboBox cbCadastroRapidCoro02;
+        private System.Windows.Forms.ComboBox cbCadastroRapidoCor02;
         private System.Windows.Forms.Button btnCancelarCadastrorapido01;
         private System.Windows.Forms.Button btnCancelarCadastrorapido02;
         private System.Windows.Forms.CheckBox ckbFazBarulho;
         private System.Windows.Forms.CheckBox ckbAsaQuebrada;
         private System.Windows.Forms.CheckBox ckbMulher;
         private System.Windows.Forms.CheckBox ckbCadastroRapidoMulher;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnFamilia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnElemento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Columnmulher;
     }
 }

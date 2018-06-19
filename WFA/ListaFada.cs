@@ -14,8 +14,7 @@ namespace WFA
     public partial class ListaFada : Form
     {
         string nomeAntigo  = string.Empty;
-        List<Fada> fadas = new List<Fada>();
-        List<FadaRapido> fadaRapidos = new List<FadaRapido>();
+        List<Fada> fadas = new List<Fada>();        
 
         public ListaFada()
         {
@@ -40,12 +39,17 @@ namespace WFA
 
         private void LimparCampos()
         {
+            txtCadastroRapidoNome01.Text = "";           
+            cbCadastroRapidoCor01.SelectedIndex = -1;
+            txtCadastroRapidoNome02.Text = "";
+            txtCadastroRapidoFamilia02.Text = "";
+            cbCadastroRapidoCor02.SelectedIndex = -1;
             txtNome.Text = "";
             txtTamanhoAsa.Text = "";
             txtFamilia.Text = "";
             txtTamanhoAsa.Text = "";
             cbElemento.SelectedIndex = -1;
-            cbCor.SelectedIndex = -1 ;
+            cbCor.SelectedIndex = -1;
             cbCorAsa.SelectedIndex = -1;
             ckbFazBarulho.Checked = false;
             ckbMulher.Checked = false;            
@@ -55,21 +59,57 @@ namespace WFA
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
+            if (txtNome.Text == "")
+            {
+                MessageBox.Show("Nome deve ser preenchido");
+                return;
+            }
+
+
             try
             {
-                if (txtNome == null)
-                {
-                    throw new Exception("Nome deve ser preenchido");
-                }
-            }
-            catch (Exception e1)
-            {
-                MessageBox.Show(e1.Message);
-            }
-            
+                Convert.ToDouble(txtTamanhoAsa.Text);
 
-            
-         
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Digite um tamanho para Asa");
+                return;
+            }
+
+
+            if (txtFamilia.Text == "")
+            {
+                MessageBox.Show("Familia deve ser preenchido");
+                return;
+            }
+
+
+
+            if (cbElemento.SelectedItem == null)
+            {
+                MessageBox.Show("Selecione um elemento");
+                return;
+            }
+
+
+            if (cbCor.SelectedItem == null)
+            {
+                MessageBox.Show("Selecione uma Cor");
+                return;
+            }
+
+
+            if (cbCorAsa.SelectedItem == null)
+            {
+                MessageBox.Show("Selecione uma Cor para Asa");
+                return;
+            }
+
+            if (ckbMulher.Checked == true)
+            {
+                
+               
 
             try
             {
@@ -82,15 +122,16 @@ namespace WFA
                     Elemento = cbElemento.SelectedItem.ToString(),
                     Mulher = ckbMulher.Checked,
                     FazBarulho = ckbFazBarulho.Checked,
-                    AsaQuebrada = ckbAsaQuebrada.Checked,                   
-                    TamanhoAsa = Convert.ToDouble(txtTamanhoAsa.Text)
+                    AsaQuebrada = ckbAsaQuebrada.Checked,
+                    TamanhoAsa = Convert.ToDouble(txtTamanhoAsa.Text),
+
                 };
-                if (nomeAntigo == "") 
+                if (nomeAntigo == "")
                 {
                     fadas.Add(fada);
                     MessageBox.Show("Cadastrado com Sucesso");
                     AdicionarFadaNaTabela(fada);
-                    
+
                 }
                 else
                 {
@@ -99,7 +140,7 @@ namespace WFA
                     EditarFadaNaTabela(fada, linha);
                     MessageBox.Show("Alterado com sucesso");
                     nomeAntigo = string.Empty;
-                   
+
                 }
 
                 LimparCampos();
@@ -107,12 +148,10 @@ namespace WFA
 
 
             }
-            catch(Exception e1)
+            catch (Exception e1)
             {
                 MessageBox.Show(e1.Message);
-            }
-            
-            
+            } 
         }
 
         private void EditarFadaNaTabela(Fada fada, int linha)
@@ -120,15 +159,14 @@ namespace WFA
             dataGridView1.Rows[linha].Cells[0].Value = fada.Nome;
             dataGridView1.Rows[linha].Cells[1].Value = fada.Familia;
             dataGridView1.Rows[linha].Cells[2].Value = fada.Cor;
-            dataGridView1.Rows[linha].Cells[3].Value = fada.CorAsa;
-            dataGridView1.Rows[linha].Cells[4].Value = fada.TamanhoAsa;
-            dataGridView1.Rows[linha].Cells[5].Value = fada.Elemento;
+            dataGridView1.Rows[linha].Cells[3].Value = fada.Elemento;
+            dataGridView1.Rows[linha].Cells[4].Value = fada.Mulher;
         }
 
         private void AdicionarFadaNaTabela(Fada fada)
         {
             dataGridView1.Rows.Add(new Object[]{
-                fada.Nome, fada.Familia, fada.Cor, fada.Elemento
+                fada.Nome, fada.Familia, fada.Cor, fada.Elemento, fada.Mulher
                 });
         }
 
@@ -149,54 +187,29 @@ namespace WFA
 
             int linhaSelecionada = dataGridView1.CurrentRow.Index;
             string nome = dataGridView1.Rows[linhaSelecionada].Cells[0].Value.ToString();
+            DialogResult resultado = MessageBox.Show("Deseja Realmente apagar o cadastro " + nome + " ?", "AVISO",
+                MessageBoxButtons.YesNo);
 
-            for (int i = 0; i < fadas.Count; i++)
-            {
-                Fada fada = fadas[i];
-                if (fada.Nome == nome)
+          
+                if (resultado == DialogResult.Yes)
                 {
-                    fadas.RemoveAt(i);
+                    ApagarFada();
                 }
-            }
-
-            dataGridView1.Rows.RemoveAt(linhaSelecionada);
+                else
+                {
+                    MessageBox.Show(nome + " Não Apagado");
+                }            
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
+        private void ApagarFada()
         {
-            if (dataGridView1.Rows.Count == 0)
-            {
-                MessageBox.Show("Cadastre uma Fada");
-                tabControl1.SelectedIndex = 1;
-                return;
-            }
-
-            if (dataGridView1.CurrentRow == null)
-            {
-                MessageBox.Show("Selecione uma linha");
-                return;
-            }
-
             int linhaSelecionada = dataGridView1.CurrentRow.Index;
             string nome = dataGridView1.Rows[linhaSelecionada].Cells[0].Value.ToString();
-
-            foreach(Fada fada in fadas)
-            {
-                if(fada.Nome == nome)
-                {
-                    txtNome.Text = fada.Nome;
-                    txtFamilia.Text = fada.Familia;
-                    cbCor.Text = fada.Cor;
-                    cbCorAsa.Text = fada.CorAsa;
-                    cbElemento.Text = fada.Elemento;
-                    ckbMulher.Checked = true;
-                    ckbFazBarulho.Checked = true;
-                    ckbAsaQuebrada.Checked = true;
-                    txtTamanhoAsa.Text = Convert.ToString(fada.TamanhoAsa);
-                }
-            }
+            dataGridView1.Rows.RemoveAt(dataGridView1.CurrentRow.Index);
+            MessageBox.Show(nome + " Apagado com Sucesso");
         }
 
+       
         private void btnCadastroRapido01_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 2;
@@ -209,68 +222,95 @@ namespace WFA
 
         private void btnSalvarRapido01_Click(object sender, EventArgs e)
         {
-            FadaRapido fadaRapido = new FadaRapido(txtCadastroRapidoNome01.Text, txtCadastroRapidoFamilia01.Text, 
-                cbCadastroRapidoCor01.SelectedItem.ToString());
+            if (txtCadastroRapidoNome01.Text == "")
+            {
+                MessageBox.Show("Nome deve ser preenchido");
+                return;
+            }
+
+
+            if (cbCadastroRapidoCor01.SelectedItem == null)
+            {
+                MessageBox.Show("Selecione uma Cor");
+                return;
+            }
+
+            Fada fada = new Fada(txtCadastroRapidoNome01.Text, cbCadastroRapidoCor01.SelectedItem.ToString(),
+                ckbCadastroRapidoMulher.Checked);
             if (nomeAntigo == "")
-            {                
-                fadaRapidos.Add(fadaRapido);
+            {
+                fadas.Add(fada);
                 MessageBox.Show("Cadastrado com Sucesso");
-                AdicionarFadaRapidoNaTabela(fadaRapido);
+                AdicionarFadaNaTabela(fada);
 
             }
             else
             {
                 int linha = fadas.FindIndex(x => x.Nome == nomeAntigo);
-                fadaRapidos[linha] = fadaRapido;
-                EditarFadaNaTabela(fadaRapido, linha);
+                fadas[linha] = fada;
+                EditarFadaNaTabela(fada, linha);
                 MessageBox.Show("Alterado com sucesso");
                 nomeAntigo = string.Empty;
 
             }
-
             LimparCampos();
             tabControl1.SelectedIndex = 0;
-            
-        }
-
-        private void EditarFadaNaTabela(FadaRapido fadaRapido, int linha)
-        {
-            dataGridView1.Rows[linha].Cells[0].Value = fadaRapido.NomeRapido;
-            dataGridView1.Rows[linha].Cells[1].Value = fadaRapido.FamiliaRapido;
-            dataGridView1.Rows[linha].Cells[2].Value = fadaRapido.CorRapido;
-        }
-
-        private void AdicionarFadaRapidoNaTabela(FadaRapido fadaRapido)
-        {
-            dataGridView1.Rows.Add(new Object[]{
-                fadaRapido.NomeRapido, fadaRapido.FamiliaRapido, fadaRapido.CorRapido, ""
-                });
+  
         }
 
         private void btnSalvarRapido02_Click(object sender, EventArgs e)
         {
-            FadaRapido fadaRapido = new FadaRapido(txtCadastroRapidoNome02.Text, txtCadastrorapidoFamilia02.Text, 
-                cbCadastroRapidCoro02.SelectedItem.ToString());
+           
+                if (txtCadastroRapidoNome02.Text == "")
+                {
+                   MessageBox.Show("Nome deve ser preenchido");
+                   return;
+                }
+           
+           
+                if (txtCadastroRapidoFamilia02.Text == "")
+                {
+                    MessageBox.Show("Familia deve ser preenchido");
+                    return;
+                    
+                }
+            
+            try
+            {
+                if (cbCadastroRapidoCor02.SelectedItem == null)
+                {
+                    MessageBox.Show("Selecione uma Cor");
+                    return;
+
+                }
+
+            }
+            catch (Exception e1)
+            {
+                MessageBox.Show(e1.Message);
+            }
+
+            Fada fada = new Fada(txtCadastroRapidoNome02.Text, txtCadastroRapidoFamilia02.Text,
+                cbCadastroRapidoCor02.SelectedItem.ToString());
+           
             if (nomeAntigo == "")
             {
-                fadaRapidos.Add(fadaRapido);
+                fadas.Add(fada);
                 MessageBox.Show("Cadastrado com Sucesso");
-                AdicionarFadaRapidoNaTabela(fadaRapido);
+                AdicionarFadaNaTabela(fada);
 
             }
             else
             {
                 int linha = fadas.FindIndex(x => x.Nome == nomeAntigo);
-                fadaRapidos[linha] = fadaRapido;
-                EditarFadaNaTabela(fadaRapido, linha);
+                fadas[linha] = fada;
+                EditarFadaNaTabela(fada, linha);
                 MessageBox.Show("Alterado com sucesso");
                 nomeAntigo = string.Empty;
 
             }
-
             LimparCampos();
             tabControl1.SelectedIndex = 0;
-
         }
 
         private void btnCancelarCadastrorapido01_Click(object sender, EventArgs e)
@@ -295,10 +335,47 @@ namespace WFA
             }
         }
 
-        private void tabPageCadastro_Click(object sender, EventArgs e)
+        private void btnEditar_Click_1(object sender, EventArgs e)
         {
+            if (dataGridView1.Rows.Count == 0)
+            {
+                MessageBox.Show("Cadastre uma Fada");
+                tabControl1.SelectedIndex = 1;
+                return;
+            }
 
+            if (dataGridView1.CurrentRow == null)
+            {
+                MessageBox.Show("Selecione uma linha");
+                return;
+            }
+
+            int linhaSelecionada = dataGridView1.CurrentRow.Index;
+            string nome = dataGridView1.Rows[linhaSelecionada].Cells[0].Value.ToString();
+
+            foreach (Fada fada in fadas)
+            {
+                if (fada.Nome == nome)
+                {
+                    
+                    txtNome.Text = fada.Nome;
+                    txtFamilia.Text = fada.Familia;
+                    cbCor.Text = fada.Cor;
+                    cbCorAsa.Text = fada.CorAsa;
+                    cbElemento.Text = fada.Elemento;
+                    ckbMulher.Checked = true;
+                    ckbFazBarulho.Checked = true;
+                    ckbAsaQuebrada.Checked = true;
+                    txtTamanhoAsa.Text = Convert.ToString(fada.TamanhoAsa);
+                    nomeAntigo = fada.Nome;
+                    tabControl1.SelectedIndex = 1;
+                    break;
+                }
+            }
+            
         }
+
+       
     }
 
 }

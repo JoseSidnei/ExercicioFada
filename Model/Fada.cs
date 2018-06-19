@@ -175,5 +175,26 @@ namespace Model
                 fazbarulho = value;
             }
         }
+
+        public Fada(string nome, string familia, string Cor)
+        {
+            Nome = nome;
+            Familia = familia;
+            Cor = cor;
+        }
+
+        public Fada(string nome, string cor, bool mulher)
+        {
+            Nome = nome;
+            Cor = cor;
+            Mulher = mulher;
+        }
+
+        public Fada()
+        {
+            // TODO: Complete member initialization
+        }
+       
+
     }
 }
